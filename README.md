@@ -82,3 +82,8 @@ terraform destroy
 
 ## 🧠 Inspiration
 Ideal for beginner to intermediate DevOps, SRE, or cloud engineering portfolios. Demonstrates practical use of AWS infrastructure with real-world application.
+
+## Future Contributions
+Automate deployments using GitHub Actions, GitLab CI, or similar.
+Include an architecture diagram showing the flow (e.g. GitHub → S3 → CloudFront → DNS).
+Add Cloudfront to enhance speed and performance of the static website
