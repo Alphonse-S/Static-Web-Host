@@ -1,8 +1,9 @@
 # S3 Website URL
-output "website_url" {
-  description = "URL of the S3 static website"
-  value       = aws_s3_bucket.static_site.website_endpoint
+output "s3_website_url" {
+  value       = aws_s3_bucket_website_configuration.static_site.website_endpoint
+  description = "The website endpoint for the S3 bucket"
 }
+
 
 # EC2 Public IP
 output "ec2_public_ip" {
@@ -10,8 +11,8 @@ output "ec2_public_ip" {
   value       = aws_instance.web.public_ip
 }
 
-# Route 53 Domain Name
-output "website_domain_name" {
-  description = "The domain name from Route53"
-  value       = aws_route53_record.www.fqdn
+# CloudFront Distribution Domain Name
+output "cloudfront_url" {
+  value       = aws_cloudfront_distribution.static_site.domain_name
+  description = "The URL of the CloudFront distribution"
 }

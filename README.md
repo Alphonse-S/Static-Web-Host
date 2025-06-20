@@ -29,6 +29,8 @@ terraform-static-site/
 │   ├── ec2/
 │   │   └── main.tf
 │   └── route53/
+│   |    └── main.tf
+│   └── CloudFront/
 │       └── main.tf
 ├── user_data.sh
 ├── index.html
@@ -59,7 +61,7 @@ terraform destroy
 
 - S3 Website URL
 - EC2 Public IP
-- Route 53 Domain Name
+- CloudFront Distribution Domain name
 
 ---
 
@@ -84,6 +86,6 @@ terraform destroy
 Ideal for beginner to intermediate DevOps, SRE, or cloud engineering portfolios. Demonstrates practical use of AWS infrastructure with real-world application.
 
 ## Future Contributions
-Automate deployments using GitHub Actions, GitLab CI, or similar.
+Automate deployments using GitHub Actions, Jenkins, or similar.
 Include an architecture diagram showing the flow (e.g. GitHub → S3 → CloudFront → DNS).
 Add Cloudfront to enhance speed and performance of the static website

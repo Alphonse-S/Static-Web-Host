@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "static_site" {
-  bucket = "my-static-site-tabitha-2025"  
+  bucket = "my-static-site-swagger-1995"  
 
 
   tags = {
@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "static_site" {
   }
 }
 
-resource "aws_s3_bucket_website_configuration" "portfolio_site" {
+resource "aws_s3_bucket_website_configuration" "static_site" {
   bucket = aws_s3_bucket.static_site.id
 
   index_document {
@@ -61,4 +61,8 @@ resource "aws_s3_object" "index" {
   content_type = "text/html"
   
 }
+
+
+
+
 

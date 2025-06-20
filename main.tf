@@ -79,38 +79,6 @@ resource "aws_route" "public-internet-route" {
   gateway_id   = aws_internet_gateway.static_web_igw.id
 }
 
-# create security group for EC2
-resource "aws_security_group" "static_web_ec2" {
-  name        = "static_web_ec2"
-  description = "security group for static web hosting"
-  vpc_id      = aws_vpc.static_web_vpc.id
 
-  ingress {
-    from_port   = 80
-    to_port     = 80
-    protocol    = "tcp"
-    description = "http"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    description = "ssh"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
-    }
-
-  tags = {
-    Name = "Main"
-  }
-}
 
 
